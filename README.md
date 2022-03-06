@@ -6,7 +6,7 @@ The application basically takes user input (annual income), asks the user to sel
 
 This project was to help me learn the basics of designing and developing mobile applications on android devices, and to strengthen my  knowledge in Kotlin.
 
-A video demo of my application is in the link below:
+A video demo of my application is in the link here:
 [Software Demo Video](https://youtu.be/t5uRvj3c7Tc)
 
 # Development Environment
