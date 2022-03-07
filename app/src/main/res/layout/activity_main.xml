@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/annualIncome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Annual Income" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:text="What is your tax bracket?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <RadioGroup
+        android:id="@+id/taxBracket"
+        android:layout_width="374dp"
+        android:layout_height="342dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/tenPercent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$0 to $9,950 (10%)" />
+
+        <RadioButton
+            android:id="@+id/twelvePercent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$9,951 to $40,525 (12%)" />
+
+        <RadioButton
+            android:id="@+id/twentyTwoPercent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$40,526 to $86,375 (22%)" />
+
+        <RadioButton
+            android:id="@+id/twentyFourPercent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$86,376 to $164,925 (24%)" />
+
+        <RadioButton
+            android:id="@+id/thirtyTwoPercent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$164,926 to $209,425 (32%)" />
+
+        <RadioButton
+            android:id="@+id/thirtyFivePercent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$209,426 to $523,600 (35%)" />
+
+        <RadioButton
+            android:id="@+id/thirtySevenPercent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$523,601 or more (37%)" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calculateTaxBtn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:text="CALCULATE TAX"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taxBracket" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:text="Your tax payment is:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateTaxBtn" />
+
+    <TextView
+        android:id="@+id/resultantTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/calculateTaxBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
